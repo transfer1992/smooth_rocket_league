@@ -34,8 +34,8 @@ def get_rl_ports():
                      for line in udp_lines]
         return {
             'success': True,
-            tcp_ports: tcp_ports,
-            udp_ports: udp_ports
+            'tcp': tcp_ports,
+            'udp': udp_ports
         }
     else:
         print('Nie ma takiego procesu')
