@@ -10,7 +10,10 @@
       "type": "python",
       "request": "launch",
       "program": "${workspaceRoot}/srl.py",
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONDONTWRITEBYTECODE": 1
+      }
     }
   ]
 }
