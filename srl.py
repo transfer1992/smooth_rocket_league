@@ -1,6 +1,7 @@
 import subprocess
 import re
 from time import sleep
+from datetime import datetime
 
 p = re.compile('[0-9]+')
 
@@ -28,8 +29,8 @@ while(True):
 
     tcp_ports = [int(float(line.split(':')[1].split(' ')[0])) for line in tcp_lines]
     udp_ports = [int(float(line.split(':')[1].split(' ')[0])) for line in udp_lines]
-    print(tcp_ports, udp_ports)
+    print(datetime.now().time(), tcp_ports, udp_ports)
   else:
     print('Nie ma takiego procesu')
 
-  sleep(1)
+  sleep(5)
