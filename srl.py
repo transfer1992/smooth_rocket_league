@@ -19,7 +19,7 @@ while(True):
 
     if len(new_rl_ports['udp']) + len(new_rl_ports['tcp']) <= 16:
         if rl_ports_changed(old_rl_ports, new_rl_ports):
-            print('Ports changed, proceeding with update...')
+            print('\nPorts changed, proceeding with update...')
             perform_login()
 
             old_ports_count = len(old_rl_ports['tcp']) + len(old_rl_ports['udp'])
@@ -40,4 +40,4 @@ while(True):
 
             old_rl_ports = new_rl_ports
             print('QoS rules updated successfully!')
-    sleep(2)
+    sleep(10)
