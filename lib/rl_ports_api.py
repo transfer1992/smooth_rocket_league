@@ -9,7 +9,7 @@ executable = 'RocketLeague.exe'
 
 def get_rl_ports():
     pid_result = subprocess.run('wmic process where name="{}" get processid'.format(
-        executable), stdout=subprocess.PIPE)
+        executable), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     pid = p.search(pid_result.stdout.decode())
 
     if pid is not None:
@@ -38,7 +38,6 @@ def get_rl_ports():
             'udp': udp_ports
         }
     else:
-        print('Nie ma takiego procesu')
         return {
             'success': False
         }
